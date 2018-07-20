@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+//-- プロジェクトに依存する設定用の変数群 --//
+
+// Paths
+// CSS から呼び出すファイルのパス
+$path-vector: "/assets/media/images/vector";
+$path-raster: "/assets/media/images/raster";
+
+// Typography
+// 文字関係
+
+// root font size
+$fs-root: 16px;
+
+// font size
+$fs-xxmicro: rem(10px);
+$fs-xmicro: rem(11px);
+$fs-micro: rem(12px);
+$fs-xxsmall: rem(13px);
+$fs-xsmall: rem(14px);
+$fs-small: rem(15px);
+$fs-base: rem(16px);
+$fs-large: rem(18px);
+$fs-xlarge: rem(20px);
+$fs-semixlarge: rem(22px);
+$fs-xxlarge: rem(24px);
+
+// font families
+@font-face {
+  font-family: "MyYuGothicM";
+  font-weight: normal;
+  src: local("YuGothic-Medium"),
+  local("Yu Gothic Medium"),
+  local("YuGothic-Regular");
+}
+@font-face {
+  font-family: "MyYuGothicM";
+  font-weight: bold;
+  src: local("YuGothic-Bold"),
+  local("Yu Gothic");
+}
+$ff-fallback: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", MyYuGothicM, "Meiryo", sans-serif;
+$ff-ja: $ff-fallback;
+$ff-bold-ja: $ff-fallback;
+$ff-en: "Arial", $ff-ja;
+
+// font weights
+$fw-normal-ja: 300;
+$fw-bold-ja: 600;
+$fw-semiBold-en: 600;
+
+// Dimensions
+// 幅や高さ
+$content-inner-width: 1040px;
+$sp-content-inner-width: 89.3%;
+$content-padding: 120px;
+$sp-content-padding: 5.3%;
+$content-width: $content-inner-width + $content-padding;
+$main-content-width: 880px;
+
+// Color
+$primary-blue: #67afe1;
+$anchor-blue: #45b1e9;
+$feature: #27a65f;
+$culture: #a68427;
+$member: #2d27a6;
+$event: #a91e4f;
+
+
+

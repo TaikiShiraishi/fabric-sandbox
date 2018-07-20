@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+@import "./strip-unit";
+
+@function em($font-size, $base-font-size) {
+  @return #{strip-unit($font-size / $base-font-size)}em;
+}

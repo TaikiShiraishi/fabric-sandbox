@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+a {
+  background-color: transparent;
+}
+
+svg {
+  fill: currentColor;
+
+  &:not(:root) {
+    overflow: hidden;
+  }
+}
+
+use {
+  fill: currentColor;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+
+}
+
+table {
+  text-align: left;
+}
+
+thead {
+  text-align: center;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border-width: 0;
+  padding: 0;
+}
+
+fieldset {
+  border-width: 0;
+  padding: 0;
+  margin: 0;
+}

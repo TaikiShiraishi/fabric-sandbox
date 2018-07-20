@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+// z-indexの管理
+// クラス名を`$DEPTH`配列に記述
+@mixin z-index($className) {
+  $DEPTH: common, GoTop, HeroInner, TagContainer, Header, Menu, Logo;
+  z-index: index($DEPTH, $className);
+}

@@ -1,0 +1,12 @@
+*.DS_Store
+._*
+.env
+.idea/
+.node-version
+.tmp/
+.vscode/
+Desktop.ini
+dist/
+node_modules/
+npm-debug.log*
+Thumbs.db

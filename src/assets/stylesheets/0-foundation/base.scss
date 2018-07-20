@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+@import "../include/export";
+
+:root {
+  min-height: 100%;
+  font: {
+    size: percentage($fs-root / 16px);
+    weight: $fw-normal-ja;
+    family: $ff-ja;
+  }
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "palt";
+}
+
+body {
+  overflow-x: hidden;
+  font-size: percentage(16px / $fs-root);
+}
+
+* {
+  &::selection {
+    color: #fff;
+    background: {
+      color: $anchor-blue;
+    }
+  }
+
+  &::-moz-selection {
+    color: #fff;
+    background: {
+      color: $anchor-blue;
+    }
+  }
+}
+
+[data-whatintent="mouse"] *:focus,
+[data-whatintent="touch"] *:focus {
+  outline: none;
+}

@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+$media-query-em-unit: false !default;
+
+$mq-s: 0 !default;;
+$mq-m: 375 !default;
+$mq-l: 768 !default;
+$mq-xl: 1024 !default;
+$mq-2xl: 1140 !default;
+$mq-3xl: 1600 !default;
+
+@function __get-mq-breakpont($width) {
+  @if $media-query-em-unit {
+    @return $width / 16 * 1em;
+  } @else {
+    @return $width * 1px;
+  }
+}
+
+@mixin __mq-breakpoint($breakpoint) {
+  @media (min-width: __get-mq-breakpont($breakpoint)) {
+    @content;
+  }
+}
+
+@mixin mq-small() {
+  @if $mq-s > 0 {
+    @include __mq-breakpoint($mq-s) {
+      @content;
+    }
+  }
+}
+
+@mixin mq-medium() {
+  @include __mq-breakpoint($mq-m) {
+    @content;
+  }
+}
+
+@mixin mq-large() {
+  @include __mq-breakpoint($mq-l) {
+    @content;
+  }
+}
+
+@mixin mq-xlarge() {
+  @include __mq-breakpoint($mq-xl) {
+    @content;
+  }
+}
+
+@mixin mq-2xlarge() {
+  @include __mq-breakpoint($mq-2xl) {
+    @content;
+  }
+}
+
+@mixin mq-3xlarge() {
+  @include __mq-breakpoint($mq-3xl) {
+    @content;
+  }
+}

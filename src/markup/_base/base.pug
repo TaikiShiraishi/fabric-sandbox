@@ -1,0 +1,36 @@
+//- 各ページで使う変数
+block vars
+  -
+    var pageName = "";
+    var pageType = "";
+    var pathBase = "./";
+    var page = {
+      title: ""
+    };
+    var htmlAttrs = {};
+    var bodyAttrs = {};
+    var activeNavigation = "";
+
+//- 変数初期化
+-
+  page.lang = page.lang || site.lang;
+  page.title = (page.title ? page.title + site.separater : "") + site.name;
+
+doctype html
+
+include util/svg-use
+
+html&attributes(htmlAttrs)
+
+  head
+    include partial/head
+    block head
+
+  body.page&attributes(bodyAttrs)
+
+    div#root
+
+      include component/header
+      block content
+      include component/footer
+      include partial/foot

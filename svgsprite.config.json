@@ -1,0 +1,9 @@
+{
+  "dest": "dist/assets/media/images/vector",
+  "mode": {
+    "symbol": {
+      "dest": ".",
+      "sprite": "sprite.svg"
+    }
+  }
+}

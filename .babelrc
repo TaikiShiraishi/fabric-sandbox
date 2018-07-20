@@ -1,0 +1,15 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "target": {
+          "browsers": ["ie 11", ">1% in JP"]
+        },
+        "modules": false,
+        "useBuiltIns": true
+      }
+    ]
+  ],
+  "plugins": ["transform-runtime"]
+}

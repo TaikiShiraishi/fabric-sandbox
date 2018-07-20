@@ -1,0 +1,14 @@
+extends _base/base
+
+block append vars
+  - bodyAttrs['data-page'] = 'index';
+  - page['title'] = 'test';
+  - activeNavigation = 'TOP';
+
+
+block content
+  div#canvasWrap.container
+    canvas#canvas(width="600" height="600")
+    button#add add rect
+    button#delete delete object
+    button#rotate rotate(90);

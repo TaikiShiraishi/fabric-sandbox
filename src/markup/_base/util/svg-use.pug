@@ -1,0 +1,26 @@
+mixin use(id)
+  use(xlink:href=`${pathBase}${path.vector}/sprite.svg#${id}`)&attributes(attributes)
+
+mixin svg(title, titleId, fallbackImage)
+  -
+    var svgAttrObj = { "preserveAspectRatio": "xMidYMid meet", "pointer-events": "none" }; //- for IE
+    var titleAttrObj = {};
+
+  if titleId
+    -
+      svgAttrObj["aria-labelledby"] = titleId;
+      svgAttrObj["role"] = "img";
+      titleAttrObj["id"] = titleId;
+
+  svg&attributes(svgAttrObj)&attributes(attributes)
+    if title
+      title&attributes(titleAttrObj) #{title}
+    block
+    if fallbackImage
+      foreignObject(display="none")
+        img(src=fallbackImage, alt=title)
+
+
+mixin svg-use(id, title, titleId, fallbackImage)
+  +svg(title, titleId, fallbackImage)&attributes(attributes)
+    +use(id)

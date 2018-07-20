@@ -1,0 +1,5 @@
+@charset "UTF-8";
+
+@function rem($font-size) {
+  @return $font-size / $root-font-size * 1rem;
+}
